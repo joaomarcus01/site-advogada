@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Escritório de Advocacia — Assessoria jurídica personalizada com ética, dedicação e compromisso na defesa dos seus direitos.">
+    <meta name="theme-color" content="#6B2037">
+    <title>Escritório de Advocacia | Assessoria Jurídica Personalizada</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- ═══════════════════════════════════════
+             CABEÇALHO — Logo sobre fundo Marsala
+        ═══════════════════════════════════════ -->
+        <header class="header" id="header">
+            <img src="Fotos/logo.jpeg" alt="Logo do Escritório de Advocacia" class="header__logo" width="130"
+                height="auto">
+        </header>
+
+        <!-- ═══════════════════════════════════════
+             HERO — Lady Justice (Unsplash) + Overlay
+        ═══════════════════════════════════════ -->
+        <section class="hero" id="hero" aria-label="Área de destaque principal">
+            <div class="hero__background" role="img" aria-label="Estátua da Justiça"></div>
+            <div class="hero__content">
+                <div class="hero__ornament" aria-hidden="true"></div>
+                <p class="hero__tagline">Advocacia & Assessoria Jurídica</p>
+                <div class="hero__title-slider" id="hero-slider">
+                    <h1 class="hero__title active">
+                        A proteção dos seus <em>direitos</em> começa com quem luta por você
+                    </h1>
+                    <h1 class="hero__title">
+                        Visão <em>estratégica</em> para resultados sólidos e duradouros
+                    </h1>
+                    <h1 class="hero__title">
+                        Excelência e <em>dedicação</em> em cada detalhe do seu caso
+                    </h1>
+                </div>
+                <p class="hero__subtitle">
+                    Atendimento humanizado, ético e comprometido com a sua causa.
+                </p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             PERFIL — Foto + Nome + OAB
+        ═══════════════════════════════════════ -->
+        <section class="profile" id="profile" aria-label="Perfil da advogada">
+            <div class="profile__image-wrapper">
+                <img src="Fotos/pessoa.jpeg" alt="Foto da Dra. Geovana Oliveira Carvalho" class="profile__image"
+                    width="150" height="150" loading="lazy">
+            </div>
+
+            <h2 class="profile__name">Dra. Geovana Oliveira Carvalho</h2>
+            <p class="profile__oab">OAB/XX 000.000</p>
+            <p class="profile__education">Formada em Administração e Direito</p>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             CARROSSEL — Diferenciais (Scroll-Snap)
+        ═══════════════════════════════════════ -->
+        <section class="carousel" id="diferenciais" aria-label="Diferenciais do escritório">
+            <div class="carousel__header">
+                <h2 class="carousel__title">Por que me escolher?</h2>
+                <p class="carousel__hint">
+                    Deslize para conhecer
+                    <span class="carousel__hint-arrow" aria-hidden="true">→</span>
+                </p>
+            </div>
+
+            <div class="carousel__track" role="list">
+
+                <!-- Card 1 -->
+                <article class="carousel__card" role="listitem">
+                    <span class="carousel__card-icon" aria-hidden="true">🤝</span>
+                    <h3 class="carousel__card-title">Atendimento Humanizado</h3>
+                    <p class="carousel__card-text">
+                        Cada cliente é único. Ofereço escuta ativa e acolhimento
+                        para entender sua situação com empatia e respeito.
+                    </p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="carousel__card" role="listitem">
+                    <span class="carousel__card-icon" aria-hidden="true">⚖️</span>
+                    <h3 class="carousel__card-title">Ética Profissional</h3>
+                    <p class="carousel__card-text">
+                        Atuação pautada pela transparência, honestidade e pelo
+                        rigoroso cumprimento do Código de Ética da OAB.
+                    </p>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="carousel__card" role="listitem">
+                    <span class="carousel__card-icon" aria-hidden="true">⚡</span>
+                    <h3 class="carousel__card-title">Agilidade e Dedicação</h3>
+                    <p class="carousel__card-text">
+                        Respostas rápidas e acompanhamento constante do seu
+                        processo. Seu caso é minha prioridade.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="carousel__dots" aria-hidden="true">
+                <span class="carousel__dot carousel__dot--active"></span>
+                <span class="carousel__dot"></span>
+                <span class="carousel__dot"></span>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             ÁREAS DE ATUAÇÃO
+        ═══════════════════════════════════════ -->
+        <section class="areas" id="areas" aria-label="Áreas de atuação">
+            <h2 class="areas__title">Áreas de Atuação</h2>
+            <div class="areas__grid">
+                <div class="area-card">
+                    <span class="area-card__icon" aria-hidden="true">⚖️</span>
+                    <span class="area-card__label">Direito Civil</span>
+                </div>
+                <div class="area-card">
+                    <span class="area-card__icon" aria-hidden="true">👨‍👩‍👧</span>
+                    <span class="area-card__label">Direito de Família</span>
+                </div>
+                <div class="area-card">
+                    <span class="area-card__icon" aria-hidden="true">💼</span>
+                    <span class="area-card__label">Direito Trabalhista</span>
+                </div>
+                <div class="area-card">
+                    <span class="area-card__icon" aria-hidden="true">🏠</span>
+                    <span class="area-card__label">Direito do Consumidor</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             BOTÕES DE CONTATO
+        ═══════════════════════════════════════ -->
+        <section class="contact" id="contact" aria-label="Canais de contato">
+            <h2 class="contact__title">Entre em Contato</h2>
+            <p class="contact__subtitle">Estou pronta para ouvir você</p>
+
+            <div class="contact__buttons">
+
+                <!-- WhatsApp — Destaque Principal -->
+                <a href="#" class="btn btn--whatsapp" id="btn-whatsapp" aria-label="Conversar pelo WhatsApp">
+                    <span class="btn__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </span>
+                    Conversar pelo WhatsApp
+                </a>
+
+                <!-- E-mail -->
+                <a href="#" class="btn btn--email" id="btn-email" aria-label="Enviar e-mail">
+                    <span class="btn__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </span>
+                    Enviar E-mail
+                </a>
+
+                <!-- Localização -->
+                <a href="#" class="btn btn--location" id="btn-location" aria-label="Ver localização no Google Maps">
+                    <span class="btn__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </span>
+                    Ver Localização
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             RODAPÉ
+        ═══════════════════════════════════════ -->
+        <footer class="footer" id="footer">
+            <div class="footer__ornament" aria-hidden="true"></div>
+            <p class="footer__text">
+                © 2026 — <span>Dra. Geovana Oliveira Carvalho</span><br>
+                Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- Script para Carrossel Automático (Hero) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('#hero-slider .hero__title');
+            let currentSlide = 0;
+
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 5000); // Troca a cada 5 segundos
+            }
+        });
+    </script>
+</body>
+
+</html>
