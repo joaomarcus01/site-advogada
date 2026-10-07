@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -28,7 +28,7 @@
              CABEÇALHO — Logo sobre fundo Marsala
         ═══════════════════════════════════════ -->
         <header class="header" id="header">
-            <img src="Fotos/logo.jpeg" alt="Logo do Escritório de Advocacia" class="header__logo" width="130"
+            <img src="Fotos/logo.png" alt="Logo do Escritório de Advocacia" class="header__logo" width="130"
                 height="auto">
         </header>
 
@@ -63,12 +63,15 @@
         <section class="profile" id="profile" aria-label="Perfil da advogada">
             <div class="profile__image-wrapper">
                 <img src="Fotos/pessoa.jpeg" alt="Foto da Dra. Geovana Oliveira Carvalho" class="profile__image"
-                    width="150" height="150" loading="lazy">
+                    width="170" height="170" loading="lazy">
             </div>
 
             <h2 class="profile__name">Dra. Geovana Oliveira Carvalho</h2>
-            <p class="profile__oab">OAB/XX 000.000</p>
-            <p class="profile__education">Formada em Administração e Direito</p>
+            <p class="profile__oab">OAB/MA 31.793</p>
+            <p class="profile__education">Advogada com formação em Direito e Administração, com atuação voltada à
+                orientação e representação jurídica de pessoas físicas, especialmente nas áreas de Direito
+                Previdenciário e Direito Bancário, buscando oferecer atendimento próximo, estratégico e individualizado.
+            </p>
         </section>
 
         <!-- ═══════════════════════════════════════
@@ -76,45 +79,53 @@
         ═══════════════════════════════════════ -->
         <section class="carousel" id="diferenciais" aria-label="Diferenciais do escritório">
             <div class="carousel__header">
-                <h2 class="carousel__title">Por que me escolher?</h2>
+                <h2 class="carousel__title">Meu compromisso profissional
+                </h2>
                 <p class="carousel__hint">
                     Deslize para conhecer
                     <span class="carousel__hint-arrow" aria-hidden="true">→</span>
                 </p>
             </div>
 
-            <div class="carousel__track" role="list">
+            <div class="carousel__wrapper">
+                <button class="carousel__btn carousel__btn--prev" aria-label="Ver diferencial anterior">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+
+                <div class="carousel__track" id="carousel-track" role="list">
 
                 <!-- Card 1 -->
                 <article class="carousel__card" role="listitem">
-                    <span class="carousel__card-icon" aria-hidden="true">🤝</span>
-                    <h3 class="carousel__card-title">Atendimento Humanizado</h3>
+                    <span class="carousel__card-icon" aria-hidden="true">🔍</span>
+                    <h3 class="carousel__card-title">Atendimento Individualizado</h3>
                     <p class="carousel__card-text">
-                        Cada cliente é único. Ofereço escuta ativa e acolhimento
-                        para entender sua situação com empatia e respeito.
+                        Cada caso é analisado de acordo com suas particularidades, necessidades e circunstâncias.
                     </p>
                 </article>
 
                 <!-- Card 2 -->
                 <article class="carousel__card" role="listitem">
                     <span class="carousel__card-icon" aria-hidden="true">⚖️</span>
-                    <h3 class="carousel__card-title">Ética Profissional</h3>
+                    <h3 class="carousel__card-title">Atuação Responsável</h3>
                     <p class="carousel__card-text">
-                        Atuação pautada pela transparência, honestidade e pelo
-                        rigoroso cumprimento do Código de Ética da OAB.
-                    </p>
+                        A atuação profissional é pautada pela ética, pelo sigilo, pela responsabilidade e pelo respeito
+                        às normas da advocacia.
                 </article>
 
                 <!-- Card 3 -->
                 <article class="carousel__card" role="listitem">
-                    <span class="carousel__card-icon" aria-hidden="true">⚡</span>
-                    <h3 class="carousel__card-title">Agilidade e Dedicação</h3>
+                    <span class="carousel__card-icon" aria-hidden="true">🤝</span>
+                    <h3 class="carousel__card-title">Clareza e Transparência</h3>
                     <p class="carousel__card-text">
-                        Respostas rápidas e acompanhamento constante do seu
-                        processo. Seu caso é minha prioridade.
+                        Busco explicar cada etapa do atendimento de forma objetiva, para que o cliente compreenda suas
+                        possibilidades e decisões.
                     </p>
                 </article>
 
+                </div>
+                <button class="carousel__btn carousel__btn--next" aria-label="Ver próximo diferencial">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
             </div>
 
             <div class="carousel__dots" aria-hidden="true">
@@ -131,19 +142,18 @@
             <h2 class="areas__title">Áreas de Atuação</h2>
             <div class="areas__grid">
                 <div class="area-card">
-                    <span class="area-card__icon" aria-hidden="true">⚖️</span>
                     <span class="area-card__label">Direito Civil</span>
                 </div>
                 <div class="area-card">
-                    <span class="area-card__icon" aria-hidden="true">👨‍👩‍👧</span>
                     <span class="area-card__label">Direito de Família</span>
                 </div>
                 <div class="area-card">
-                    <span class="area-card__icon" aria-hidden="true">💼</span>
-                    <span class="area-card__label">Direito Trabalhista</span>
+                    <span class="area-card__label">Direito Previdenciário</span>
                 </div>
                 <div class="area-card">
-                    <span class="area-card__icon" aria-hidden="true">🏠</span>
+                    <span class="area-card__label">Direito Bancário</span>
+                </div>
+                <div class="area-card">
                     <span class="area-card__label">Direito do Consumidor</span>
                 </div>
             </div>
@@ -207,7 +217,7 @@
 
     </div>
 
-    <!-- Script para Carrossel Automático (Hero) -->
+    <!-- Script para Carrossel Automático (Hero) e Animações -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('#hero-slider .hero__title');
@@ -218,7 +228,47 @@
                     slides[currentSlide].classList.remove('active');
                     currentSlide = (currentSlide + 1) % slides.length;
                     slides[currentSlide].classList.add('active');
-                }, 5000); // Troca a cada 5 segundos
+                }, 4200); // Troca a cada 4,2 segundos
+            }
+
+            // IntersectionObserver para o efeito de revelação do nome
+            const profileName = document.querySelector('.profile__name');
+            if (profileName) {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0 // Dispara assim que qualquer parte do elemento estiver visível
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revelar');
+                            observer.unobserve(entry.target); // Anima apenas uma vez
+                        }
+                    });
+                }, observerOptions);
+
+                observer.observe(profileName);
+
+                // Fallback de segurança para navegadores antigos ou se a rolagem for muito rápida
+                setTimeout(() => {
+                    profileName.classList.add('revelar');
+                }, 3000);
+            }
+
+            // Script para botões do carrossel
+            const track = document.getElementById('carousel-track');
+            const btnPrev = document.querySelector('.carousel__btn--prev');
+            const btnNext = document.querySelector('.carousel__btn--next');
+
+            if (track && btnPrev && btnNext) {
+                btnPrev.addEventListener('click', () => {
+                    track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' });
+                });
+                btnNext.addEventListener('click', () => {
+                    track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' });
+                });
             }
         });
     </script>
