@@ -511,6 +511,13 @@ a {
   transform: translateY(-50%) scale(1.1);
 }
 
+/* Seta desabilitada (início/fim do carrossel) */
+.carousel__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
 .carousel__btn--prev {
   left: 6px;
 }
@@ -525,6 +532,7 @@ a {
 }
 
 .carousel__track {
+  position: relative; /* referência de offsetLeft dos cards para o JS */
   display: flex;
   gap: 14px;
   padding: var(--space-xs) var(--space-md);
@@ -789,22 +797,22 @@ a {
   fill: var(--color-primary);
 }
 
-/* Localização */
-.btn--location {
+/* Instagram */
+.btn--instagram {
   background-color: var(--color-surface);
   color: var(--color-text);
   border: 1.5px solid var(--color-border);
   box-shadow: var(--shadow-subtle);
 }
 
-.btn--location:hover {
+.btn--instagram:hover {
   border-color: var(--color-primary-light);
   background-color: var(--color-primary-ultralight);
   box-shadow: var(--shadow-card);
   transform: translateY(-1px);
 }
 
-.btn--location .btn__icon svg {
+.btn--instagram .btn__icon svg {
   fill: var(--color-primary);
 }
 
@@ -888,6 +896,167 @@ a {
     padding: 48px 20px;
     align-items: center;
     min-height: 100vh;
+  }
+}
+
+/* ═══════════════════════════════════════
+   LAYOUT INTERMEDIÁRIO PARA TABLETS (768px – 991px)
+   O PC continua a partir de 992px e o celular abaixo de 768px.
+   ═══════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* Contêiner mais largo para a página respirar */
+  .page-wrapper {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  .header__logo {
+    width: 200px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero__content {
+    max-width: 580px;
+  }
+
+  .hero__title {
+    font-size: 2.7rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.05rem;
+  }
+
+  /* Perfil */
+  .profile {
+    padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+  }
+
+  .profile__image-wrapper,
+  .profile__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile__name {
+    font-size: 3.3rem;
+  }
+
+  .profile__oab {
+    font-size: 0.8rem;
+  }
+
+  .profile__education {
+    max-width: 580px;
+    font-size: 1rem;
+  }
+
+  /* Carrossel — 2 cards visíveis por vez */
+  .carousel {
+    padding: 0 var(--space-xl) var(--space-xl);
+  }
+
+  .carousel__title {
+    font-size: 1.7rem;
+  }
+
+  .carousel__track {
+    gap: 20px;
+    padding: var(--space-sm) var(--space-sm);
+  }
+
+  .carousel__card {
+    flex: 0 0 calc(50% - 10px);
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .carousel__card-text {
+    font-size: 0.9rem;
+  }
+
+  .carousel__btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel__btn--prev {
+    left: -20px;
+  }
+
+  .carousel__btn--next {
+    right: -20px;
+  }
+
+  .carousel__btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Áreas — 3 em cima, 2 centralizadas embaixo */
+  .areas {
+    padding: var(--space-md) var(--space-2xl) var(--space-xl);
+  }
+
+  .areas__title {
+    font-size: 1.7rem;
+  }
+
+  .areas__grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+  }
+
+  .area-card {
+    grid-column: span 2;
+    min-height: 90px;
+  }
+
+  .area-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .area-card:last-child:nth-child(odd) {
+    grid-column: 4 / span 2;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .area-card__label {
+    font-size: 0.85rem;
+  }
+
+  /* Contato — WhatsApp em destaque, E-mail e Instagram lado a lado */
+  .contact {
+    padding: var(--space-md) var(--space-2xl) var(--space-2xl);
+  }
+
+  .contact__title {
+    font-size: 1.7rem;
+  }
+
+  .contact__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .btn--whatsapp {
+    grid-column: 1 / -1;
+  }
+
+  .btn {
+    font-size: 0.95rem;
   }
 }
 
@@ -999,7 +1168,7 @@ a {
   }
 
   .carousel__card {
-    flex: 0 0 340px;
+    flex: 0 0 380px;
     /* Cartões bem mais largos */
     padding: var(--space-lg);
   }

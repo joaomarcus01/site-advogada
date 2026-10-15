@@ -89,46 +89,54 @@
 
             <div class="carousel__wrapper">
                 <button class="carousel__btn carousel__btn--prev" aria-label="Ver diferencial anterior">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
                 </button>
 
                 <div class="carousel__track" id="carousel-track" role="list">
 
-                <!-- Card 1 -->
-                <article class="carousel__card" role="listitem">
-                    <span class="carousel__card-icon" aria-hidden="true">🔍</span>
-                    <h3 class="carousel__card-title">Atendimento Individualizado</h3>
-                    <p class="carousel__card-text">
-                        Cada caso é analisado de acordo com suas particularidades, necessidades e circunstâncias.
-                    </p>
-                </article>
+                    <!-- Card 1 -->
+                    <article class="carousel__card" role="listitem">
+                        <span class="carousel__card-icon" aria-hidden="true">🔍</span>
+                        <h3 class="carousel__card-title">Atendimento Individualizado</h3>
+                        <p class="carousel__card-text">
+                            Cada caso é analisado de acordo com suas particularidades, necessidades e circunstâncias.
+                        </p>
+                    </article>
 
-                <!-- Card 2 -->
-                <article class="carousel__card" role="listitem">
-                    <span class="carousel__card-icon" aria-hidden="true">⚖️</span>
-                    <h3 class="carousel__card-title">Atuação Responsável</h3>
-                    <p class="carousel__card-text">
-                        A atuação profissional é pautada pela ética, pelo sigilo, pela responsabilidade e pelo respeito
-                        às normas da advocacia.
-                </article>
+                    <!-- Card 2 -->
+                    <article class="carousel__card" role="listitem">
+                        <span class="carousel__card-icon" aria-hidden="true">⚖️</span>
+                        <h3 class="carousel__card-title">Atuação Responsável</h3>
+                        <p class="carousel__card-text">
+                            A atuação profissional é pautada pela ética, pelo sigilo, pela responsabilidade e pelo
+                            respeito
+                            às normas da advocacia.
+                    </article>
 
-                <!-- Card 3 -->
-                <article class="carousel__card" role="listitem">
-                    <span class="carousel__card-icon" aria-hidden="true">🤝</span>
-                    <h3 class="carousel__card-title">Clareza e Transparência</h3>
-                    <p class="carousel__card-text">
-                        Busco explicar cada etapa do atendimento de forma objetiva, para que o cliente compreenda suas
-                        possibilidades e decisões.
-                    </p>
-                </article>
+                    <!-- Card 3 -->
+                    <article class="carousel__card" role="listitem">
+                        <span class="carousel__card-icon" aria-hidden="true">🤝</span>
+                        <h3 class="carousel__card-title">Clareza e Transparência</h3>
+                        <p class="carousel__card-text">
+                            Busco explicar cada etapa do atendimento de forma objetiva, para que o cliente compreenda
+                            suas
+                            possibilidades e decisões.
+                        </p>
+                    </article>
 
                 </div>
                 <button class="carousel__btn carousel__btn--next" aria-label="Ver próximo diferencial">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
                 </button>
             </div>
 
-            <div class="carousel__dots" aria-hidden="true">
+            <div class="carousel__dots" id="carousel-dots" aria-hidden="true">
                 <span class="carousel__dot carousel__dot--active"></span>
                 <span class="carousel__dot"></span>
                 <span class="carousel__dot"></span>
@@ -190,15 +198,16 @@
                     Enviar E-mail
                 </a>
 
-                <!-- Localização -->
-                <a href="#" class="btn btn--location" id="btn-location" aria-label="Ver localização no Google Maps">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/" class="btn btn--instagram" id="btn-instagram"
+                    target="_blank" rel="noopener noreferrer" aria-label="Seguir no Instagram">
                     <span class="btn__icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.414.56.218.96.478 1.38.898.42.42.68.82.898 1.38.165.422.36 1.057.413 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.248 1.805-.413 2.227-.218.56-.478.96-.898 1.38-.42.42-.82.68-1.38.898-.422.165-1.057.36-2.227.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.248-2.227-.413a3.71 3.71 0 01-1.38-.898 3.71 3.71 0 01-.898-1.38c-.165-.422-.36-1.057-.413-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.248-1.805.413-2.227.218-.56.478-.96.898-1.38.42-.42.82-.68 1.38-.898.422-.165 1.057-.36 2.227-.413 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 5.775.13 4.903.333 4.14.63a5.88 5.88 0 00-2.126 1.384A5.88 5.88 0 00.63 4.14C.333 4.903.13 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.058 1.278.261 2.15.558 2.913a5.88 5.88 0 001.384 2.126A5.88 5.88 0 004.14 23.37c.763.297 1.635.5 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.058 2.15-.261 2.913-.558a5.88 5.88 0 002.126-1.384 5.88 5.88 0 001.384-2.126c.297-.763.5-1.635.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.278-.261-2.15-.558-2.913a5.88 5.88 0 00-1.384-2.126A5.88 5.88 0 0019.86.63C19.097.333 18.225.13 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                         </svg>
                     </span>
-                    Ver Localização
+                    Seguir no Instagram
                 </a>
 
             </div>
@@ -257,18 +266,73 @@
                 }, 3000);
             }
 
-            // Script para botões do carrossel
+            // Script do carrossel: navegação por card, limites e indicadores
             const track = document.getElementById('carousel-track');
             const btnPrev = document.querySelector('.carousel__btn--prev');
             const btnNext = document.querySelector('.carousel__btn--next');
+            const cards = track ? Array.from(track.querySelectorAll('.carousel__card')) : [];
+            const dots = document.querySelectorAll('#carousel-dots .carousel__dot');
 
-            if (track && btnPrev && btnNext) {
-                btnPrev.addEventListener('click', () => {
-                    track.scrollBy({ left: -track.clientWidth * 0.8, behavior: 'smooth' });
-                });
-                btnNext.addEventListener('click', () => {
-                    track.scrollBy({ left: track.clientWidth * 0.8, behavior: 'smooth' });
-                });
+            if (track && btnPrev && btnNext && cards.length > 0) {
+                const EDGE = 4; // tolerância (px) para considerar início/fim da rolagem
+                let activeIndex = 0;
+
+                const maxScroll = () => track.scrollWidth - track.clientWidth;
+
+                // Posição de rolagem que centraliza o card, limitada ao intervalo válido
+                const scrollPositionFor = (index) => {
+                    const card = cards[index];
+                    const target = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+                    return Math.max(0, Math.min(target, maxScroll()));
+                };
+
+                // Card visível = o mais próximo do centro; nas pontas, primeiro/último
+                const getActiveIndex = () => {
+                    if (track.scrollLeft <= EDGE) return 0;
+                    if (track.scrollLeft >= maxScroll() - EDGE) return cards.length - 1;
+
+                    const center = track.scrollLeft + track.clientWidth / 2;
+                    let closest = 0;
+                    let closestDistance = Infinity;
+                    cards.forEach((card, i) => {
+                        const distance = Math.abs(card.offsetLeft + card.offsetWidth / 2 - center);
+                        if (distance < closestDistance) {
+                            closestDistance = distance;
+                            closest = i;
+                        }
+                    });
+                    return closest;
+                };
+
+                const updateCarousel = () => {
+                    activeIndex = getActiveIndex();
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('carousel__dot--active', i === activeIndex);
+                    });
+                    btnPrev.disabled = track.scrollLeft <= EDGE;
+                    btnNext.disabled = track.scrollLeft >= maxScroll() - EDGE;
+                };
+
+                const goTo = (index) => {
+                    const clamped = Math.max(0, Math.min(index, cards.length - 1));
+                    track.scrollTo({ left: scrollPositionFor(clamped), behavior: 'smooth' });
+                };
+
+                btnPrev.addEventListener('click', () => goTo(activeIndex - 1));
+                btnNext.addEventListener('click', () => goTo(activeIndex + 1));
+
+                let ticking = false;
+                track.addEventListener('scroll', () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        updateCarousel();
+                        ticking = false;
+                    });
+                }, { passive: true });
+
+                window.addEventListener('resize', updateCarousel);
+                updateCarousel();
             }
         });
     </script>
