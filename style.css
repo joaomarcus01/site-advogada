@@ -370,12 +370,21 @@ a {
   font-weight: 400;
   /* Fontes caligráficas costumam ser apenas 400 */
 
-  /* Efeito Dourado Vivo e Metálico */
-  color: #C49800;
-  /* Fallback de cor viva */
-  background: linear-gradient(135deg, #B58500 0%, #FBD75B 35%, #C49800 65%, #8A6300 100%);
+  /* Ouro velho metálico — tons fechados para contraste sobre o branco */
+  color: #B8860B;
+  /* Fallback sólido */
+  background: linear-gradient(135deg, #8F6400 0%, #D4A017 40%, #B8860B 65%, #7E5A08 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* Contorno ultrafino para encorpar os traços finos da caligrafia
+     (Great Vibes só possui peso 400, então o volume vem do stroke) */
+  -webkit-text-stroke: 0.6px #9A7000;
+
+  /* Sombra de descolamento: drop-shadow no lugar de text-shadow,
+     pois text-shadow é pintado por cima do texto com fundo recortado e suja o dourado */
+  filter: drop-shadow(1px 1px 2px rgba(60, 40, 20, 0.18));
 
   margin-bottom: 4px;
   letter-spacing: -0.01em;
@@ -685,6 +694,39 @@ a {
   text-transform: uppercase;
   color: var(--color-text);
   line-height: 1.3;
+}
+
+/* === DESTAQUE — DIREITOS PREVIDENCIÁRIOS === */
+/* Imagem de ponta a ponta, sem laterais brancas */
+.banner {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  background-color: #5A1624; /* tom vinho da própria arte */
+  animation: fadeInUp 0.7s ease-out 0.7s both;
+}
+
+.banner__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* PC: arte centralizada com a mesma imagem desfocada preenchendo as laterais */
+@media (min-width: 992px) {
+  .banner::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: url('Fotos/direitos-previdenciarios.jpg') center / cover no-repeat;
+    filter: blur(30px) brightness(0.7);
+  }
+
+  .banner__image {
+    max-width: 620px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.45);
+  }
 }
 
 /* === BOTÕES DE CONTATO === */
