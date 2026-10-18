@@ -197,7 +197,7 @@
                 </a>
 
                 <!-- E-mail -->
-                <a href="mailto:geovanaoliveiracarvalho.adv@gmail.com?subject=Agendamento%20de%20atendimento" class="btn btn--email" id="btn-email" aria-label="Enviar e-mail">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=geovanaoliveiracarvalho.adv@gmail.com&su=Agendamento%20de%20atendimento" class="btn btn--email" id="btn-email" target="_blank" rel="noopener noreferrer" aria-label="Enviar e-mail">
                     <span class="btn__icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -342,6 +342,37 @@
 
                 window.addEventListener('resize', updateCarousel);
                 updateCarousel();
+            }
+
+            // Botão de e-mail: PC abre o Gmail no navegador (href padrão);
+            // iPhone/iPad tenta o app do Gmail e, se não tiver, abre o app de e-mail;
+            // Android usa mailto, que já abre o Gmail por padrão.
+            const btnEmail = document.getElementById('btn-email');
+            if (btnEmail) {
+                const EMAIL = 'geovanaoliveiracarvalho.adv@gmail.com';
+                const SUBJECT = encodeURIComponent('Agendamento de atendimento');
+                const mailtoUrl = `mailto:${EMAIL}?subject=${SUBJECT}`;
+                const ua = navigator.userAgent;
+                const isIOS = /iPhone|iPad|iPod/.test(ua) ||
+                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+                const isAndroid = /Android/.test(ua);
+
+                btnEmail.addEventListener('click', (event) => {
+                    if (isIOS) {
+                        event.preventDefault();
+                        // Se o app do Gmail não abrir em 1,5s, usa o app de e-mail padrão
+                        const fallback = setTimeout(() => {
+                            if (!document.hidden) window.location.href = mailtoUrl;
+                        }, 1500);
+                        document.addEventListener('visibilitychange', () => {
+                            if (document.hidden) clearTimeout(fallback);
+                        }, { once: true });
+                        window.location.href = `googlegmail:///co?to=${EMAIL}&subject=${SUBJECT}`;
+                    } else if (isAndroid) {
+                        event.preventDefault();
+                        window.location.href = mailtoUrl;
+                    }
+                });
             }
         });
     </script>
